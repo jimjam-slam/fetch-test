@@ -6,7 +6,7 @@
     <script>
       // three error handlers to download zip files
 
-      function fetchzip1() {
+      let fetchzip1 = function() {
         console.log('Starting zip1.zip FETCH...')
         fetch('/assets/zip1.zip')
           .then(function(response) {
@@ -17,12 +17,12 @@
               console.log('zip1 FETCH error code success!')
             }
           })
-          .catch(
+          .catch(function(err) {
             console.log('zip1 FETCH error ');
-          )
-      }
+          });
+      };
 
-      function fetchzip2() {
+      let fetchzip2 = function() {
         console.log('Starting zip2.zip FETCH...')
         fetch('/assets/zip2.zip')
           .then(function(response) {
@@ -33,12 +33,12 @@
               console.log('zip2 FETCH error code success!')
             }
           })
-          .catch(
-            console.log('zip2 FETCH error ');
-          )
-      }
+          .catch(function(err) {
+            console.log('zip1 FETCH error ');
+          });
+      };
 
-      function fetchzip3() {
+      let fetchzip3 = function() {
         console.log('Starting zip3.zip FETCH...')
         fetch('/assets/zip3.zip')
           .then(function(response) {
@@ -52,7 +52,7 @@
           .catch(function(err) {
             console.log('zip1 FETCH error ');
           });
-      }
+      };
     </script>
 
     <button id="fetchbtn1" onclick="fetchzip1()">Fetch ZIP 1</button>
