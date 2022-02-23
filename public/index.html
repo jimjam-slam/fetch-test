@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Fetch test</title>
+  </head>
+  <body>
+    <script>
+      // three error handlers to download zip files
+
+      function fetchzip1() {
+        console.log('Starting zip1.zip FETCH...')
+        fetch('/assets/zip1.zip')
+          .then(function(response) {
+            if (response.status !== 200) {
+              console.log('zip1 FETCH error code: ' + response.status);
+              return;
+            } else {
+              console.log('zip1 FETCH error code success!')
+            }
+          })
+          .catch(
+            console.log('zip1 FETCH error ');
+          )
+      }
+
+      function fetchzip2() {
+        console.log('Starting zip2.zip FETCH...')
+        fetch('/assets/zip2.zip')
+          .then(function(response) {
+            if (response.status !== 200) {
+              console.log('zip2 FETCH error code: ' + response.status);
+              return;
+            } else {
+              console.log('zip2 FETCH error code success!')
+            }
+          })
+          .catch(
+            console.log('zip2 FETCH error ');
+          )
+      }
+
+      function fetchzip3() {
+        console.log('Starting zip3.zip FETCH...')
+        fetch('/assets/zip3.zip')
+          .then(function(response) {
+            if (response.status !== 200) {
+              console.log('zip3 FETCH error code: ' + response.status);
+              return;
+            } else {
+              console.log('zip3 FETCH error code success!')
+            }
+          })
+          .catch(
+            console.log('zip1 FETCH error ');
+          )
+      }
+    </script>
+
+    <button id="fetchbtn1" onclick="fetchzip1()">Fetch ZIP 1</button>
+    <button id="fetchbtn2" onclick="fetchzip2()">Fetch ZIP 2</button>
+    <button id="fetchbtn3" onclick="fetchzip3()">Fetch ZIP 3</button>
+  </body>
+</html>
