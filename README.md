@@ -22,4 +22,10 @@ Quick example of downloading ZIP files using Fetch. Example deploy for a Jamstac
 
 6. Once it's done, it becomes available at an automatically generated address. Whenever you commit to the branch designated above, it updates.
 
-7. Now you can set up a custom domain.
+7. Now you can set up a custom domain. Go to the project view and select the :custom domains" tab.
+
+8. Select "set up a custom domain"
+
+9. Type the domain in.
+
+10. Unfortunately, unlike some other services (eg. Netlify), Cloudlfare Pages needs DNS to be transferred to Cloudflare, so you'll need to go through that process.
