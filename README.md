@@ -2,11 +2,13 @@
 
 Quick example of downloading ZIP files using Fetch. Example deploy for a Jamstack (eg. Cloudflare Pages)
 
-## Deploy with Cloudflare Pages
+(Check the Developer Tools to see `console.log` messages to verify the Fetches!)
+
+## Deploy with Cloudflare Pages (or Netlify, or similiar)
 
 1. Connect your GitHub or GitLab account
 
-2. Select a repository to deploy
+2. Select a repository to deploy (note that it doesn't need to be publicly accessible: you authorise Cloudflare Pages to access the repo in the previous step)
 
 3. Choose:
 
@@ -16,4 +18,8 @@ Quick example of downloading ZIP files using Fetch. Example deploy for a Jamstac
 
 4. Hit Save & Deploy
 
+5. The site now uploads and, if you added a build command, builds.
 
+6. Once it's done, it becomes available at an automatically generated address. Whenever you commit to the branch designated above, it updates.
+
+7. Now you can set up a custom domain.
